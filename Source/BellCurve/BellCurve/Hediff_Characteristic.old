@@ -1,0 +1,106 @@
+﻿using RimWorld;
+using HarmonyLib;
+using Verse;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using System.Reflection;
+
+namespace BellCurve
+{
+    public class Hediff_Characteristic : Hediff
+    {
+
+        private HediffStage stage;
+
+        public Dictionary<CharacteristicDef, float> characteristics;
+
+        public Dictionary<StatDef, float> statsOffset;
+
+        private float bodySizeOffset;
+
+        public float BodySizeOffset => bodySizeOffset;
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref bodySizeOffset, "bodySizeOffset", 1);
+            Scribe_Collections.Look(ref characteristics, "characteristics", LookMode.Def, LookMode.Value);
+            Scribe_Collections.Look(ref statsOffset, "statsOffset", LookMode.Def, LookMode.Value);
+
+            if (Scribe.mode == LoadSaveMode.ResolvingCrossRefs) InitStageValue();
+        }
+
+        public override HediffStage CurStage => stage;
+
+        public override int CurStageIndex => 0;
+
+        public override void PostAdd(DamageInfo? dinfo)
+        {
+            base.PostAdd(dinfo);
+            statsOffset = new Dictionary<StatDef, float>();
+
+            List<StatDef> statDefs = DefDatabase<StatDef>.AllDefsListForReading;
+            StatModifier modifier;
+            float factorValue;
+            float expValue;
+            float origine;
+            for (int i = 0; i < statDefs.Count; i++)
+            {
+                factorValue = 0;
+                expValue = 0;
+                origine = 0;
+                statsOffset.Add(statDefs[i], 0);
+                foreach (var charac in characteristics)
+                {
+                    modifier = charac.Key.statOffset?.Find(stat => stat.stat == statDefs[i]) ?? null;
+                    if (modifier != null)
+                    {
+                        statsOffset[statDefs[i]] += modifier.value * charac.Value;
+                    }
+                    modifier = charac.Key.statFactor?.Find(stat => stat.stat == statDefs[i]) ?? null;
+                    if (modifier != null)
+                    {
+                        if (statDefs[i] is RaceStatDef) 
+                        {
+                            FieldInfo fInfo = pawn.RaceProps.GetType().GetField((statDefs[i] as RaceStatDef).valueName);
+                            origine = (float)fInfo.GetValue(pawn.RaceProps);
+                        }
+                        else origine = pawn.def.GetStatValueAbstract(statDefs[i]);
+                        factorValue += charac.Value * modifier.value;
+                    }
+                    modifier = charac.Key.statFactorExp?.Find(stat => stat.stat == statDefs[i]) ?? null;
+                    if (modifier != null)
+                    {
+                        if (statDefs[i] is RaceStatDef)
+                        {
+                            FieldInfo fInfo = pawn.RaceProps.GetType().GetField((statDefs[i] as RaceStatDef).valueName);
+                            origine = (float)fInfo.GetValue(pawn.RaceProps);
+                        }
+                        else origine = pawn.def.GetStatValueAbstract(statDefs[i]);
+                        expValue += charac.Value * modifier.value;
+                    }
+                }
+                if (factorValue != 0) statsOffset[statDefs[i]] += origine * (1 + (factorValue)) - origine;
+                if (expValue != 0) statsOffset[statDefs[i]] += origine * Mathf.Exp(expValue) - origine;
+                if (statsOffset[statDefs[i]] == 0) statsOffset.Remove(statDefs[i]);
+            }
+            InitStageValue();
+        }
+
+        protected virtual void InitStageValue()
+        {
+            stage = new HediffStage();
+            stage.statOffsets = new List<StatModifier>();
+            foreach (var statOffset in statsOffset)
+            {
+                stage.statOffsets.Add(new StatModifier
+                {
+                    stat = statOffset.Key,
+                    value = statOffset.Value
+                });
+            }
+        }
+
+    }
+}

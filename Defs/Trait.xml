@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>Stature</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>dwarf</label>
+        <description>[PAWN_nameDef] is very small, it's time to make a fortress of [PAWN_possessive] stature.</description>
+        <degree>-2</degree>
+      </li>
+      <li>
+        <label>small</label>
+        <description>[PAWN_nameDef] is small.</description>
+        <degree>-1</degree>
+      </li>
+      <li>
+        <label>tall</label>
+        <description>[PAWN_nameDef] is tall.</description>
+        <degree>1</degree>
+      </li>     
+      <li>
+        <label>giant</label>
+        <description>[PAWN_nameDef] is a giant, [PAWN_pronoun] looks down other people.</description>
+        <degree>2</degree>
+      </li>     
+    </degreeDatas>
+  </TraitDef>
+  
+
+  <TraitDef>
+    <defName>FightingAptitude</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>puny</label>
+        <description>[PAWN_nameDef] is weak, if [PAWN_pronoun] has to fight, don't bet on [PAWN_objective].</description>
+        <degree>-1</degree>
+      </li>     
+      <li>
+        <label>born fighter</label>
+        <description>[PAWN_nameDef] aptitude are incredible, with practice, very few will be able to compete.</description>
+        <degree>1</degree>
+      </li>     
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>Negotiator</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>naive</label>
+        <description>[PAWN_nameDef] may be too pure or too impressionable, [PAWN_pronoun] is easily fooled.</description>
+        <degree>-1</degree>
+      </li>     
+      <li>
+        <label>subjugator</label>
+        <description>[PAWN_nameDef] possesses a sharp mind giving [PAWN_objective] an astonishing negotiating ability.</description>
+        <degree>1</degree>
+      </li>     
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Adroitness</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>clumsy</label>
+        <description>[PAWN_nameDef] lacks attention and adroitness, [PAWN_pronoun] is more likely to fail something.</description>
+		<degree>-1</degree>
+      </li>     
+      <li>
+        <label>neat</label>
+        <description>[PAWN_nameDef] is adroit and pays attention to details, [PAWN_possessive] work is always done well.</description>
+        <degree>1</degree>
+      </li>          
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Stiff</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>stiff</label>
+        <description>[PAWN_nameDef] tends to bump into things, [PAWN_pronoun] easily gets tangled in traps, and has trouble dodging blows.</description>
+      </li>      
+    </degreeDatas>
+  </TraitDef>
+  
+</Defs>

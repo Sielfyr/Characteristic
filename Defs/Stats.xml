@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <BellCurve.RaceStatDef>
+    <defName>BodySizeOffset</defName>
+    <label>body size offset</label>
+    <description>An offset on the pawn body size.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <hideAtValue>0</hideAtValue>
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <valueName>baseBodySize</valueName>
+  </BellCurve.RaceStatDef>
+
+  <BellCurve.RaceStatDef>
+    <defName>HealthScaleOffset</defName>
+    <label>health scale offset</label>
+    <description>An offset on the pawn health scale.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <valueName>baseHealthScale</valueName>
+  </BellCurve.RaceStatDef>
+
+  <BellCurve.RaceStatDef>
+    <defName>LifeExpectancyOffset</defName>
+    <label>life expectancy offset</label>
+    <description>An offset on the pawn life expectancy.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatOne</toStringStyle>
+    <valueName>lifeExpectancy</valueName>
+  </BellCurve.RaceStatDef>
+
+  <BellCurve.RaceStatDef>
+    <defName>ManhunterOnDamageOffset</defName>
+    <label>manhunter on damage offset</label>
+    <description>An offset on the pawn manhunter on damage.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <valueName>manhunterOnDamageChance</valueName>
+  </BellCurve.RaceStatDef>
+  
+  <BellCurve.RaceStatDef>
+    <defName>ManhunterOnTameFailOffset</defName>
+    <label>manhunter on tame fail offset</label>
+    <description>An offset on the pawn manhunter on tame fail.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <valueName>manhunterOnTameFailChance</valueName>
+  </BellCurve.RaceStatDef>
+
+  <BellCurve.RaceStatDef>
+    <defName>NuzzleMtbHoursOffset</defName>
+    <label>nuzzle chance offset</label>
+    <description>An offset on the pawn nuzzle chance.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <valueName>nuzzleMtbHours</valueName>
+  </BellCurve.RaceStatDef>
+
+  <StatDef>
+    <defName>KindWordChance</defName>
+    <label>kind word chance</label>
+    <description>The pawn kind word chance.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+
+  <StatDef>
+    <defName>NegativeInteractionFactor</defName>
+    <label>negative interaction factor</label>
+    <description>A factor on the pawn negative interaction chance.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+
+  <!-- <StatDef> -->
+    <!-- <defName>MassOffset</defName> -->
+    <!-- <label>mass offset</label> -->
+    <!-- <description>An offset on the pawn mass.</description> -->
+    <!-- <category>BasicsPawn</category> -->
+    <!-- <defaultBaseValue>0</defaultBaseValue> -->
+    <!-- <hideAtValue>0</hideAtValue> -->
+    <!-- <scenarioRandomizable>false</scenarioRandomizable> -->
+    <!-- <toStringStyle>FloatOne</toStringStyle> -->
+    <!-- <showIfUndefined>false</showIfUndefined> -->
+    <!-- <displayPriorityInCategory>6071</displayPriorityInCategory> -->
+  <!-- </StatDef> -->
+
+  <StatDef>
+    <defName>MeleeDamageFactor</defName>
+    <label>melee damage factor</label>
+    <description>A damage factor.</description>
+    <category>PawnCombat</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <!-- <hideAtValue>1</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+  
+  <StatDef>
+    <defName>SocialFightFactor</defName>
+    <label>social fight factor</label>
+    <description>A social fight factor.</description>
+    <category>PawnSocial</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <!-- <hideAtValue>1</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+  
+  <StatDef>
+    <defName>ManipulationFactor</defName>
+    <label>manipulation factor</label>
+    <description>A manipulation factor.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <!-- <hideAtValue>1</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+  
+  
+  <StatDef>
+    <defName>MovingFactor</defName>
+    <label>moving factor</label>
+    <description>A moving factor.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <!-- <hideAtValue>1</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+  
+  
+  <StatDef>
+    <defName>BloodPumpingFactor</defName>
+    <label>blood pumping factor</label>
+    <description>A blood pumping factor.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <!-- <hideAtValue>1</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+  
+  
+  <StatDef>
+    <defName>BreathingFactor</defName>
+    <label>breathing factor</label>
+    <description>A breathing factor.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <!-- <hideAtValue>1</hideAtValue> -->
+    <scenarioRandomizable>false</scenarioRandomizable>
+    <toStringStyle>FloatTwo</toStringStyle>
+  </StatDef>
+  
+</Defs>

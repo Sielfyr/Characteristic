@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BellCurve.CharacteristicDef Name="BaseCharac" Abstract="True">
+    <generationRolls>15</generationRolls>
+    <generationDeviation>2</generationDeviation>
+    <heredityRolls>10</heredityRolls>
+    <heredityDeviation>1</heredityDeviation>
+  </BellCurve.CharacteristicDef>
+
+
+
+
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Height</defName>
+    <label>height</label>
+    <description>The deviation of this creature's height from the average of its congeners.</description>
+    <statFactorExp>
+	  <BodySizeOffset>0.10</BodySizeOffset>
+	  <Mass>0.08</Mass>
+	  <MovingFactor>0.05</MovingFactor>
+	  <HungerRateMultiplier>0.08</HungerRateMultiplier>
+	  <HuntingStealth>-0.1</HuntingStealth>
+	</statFactorExp>
+    <statOffset>
+	  <MeleeDodgeChance>-2</MeleeDodgeChance>
+	  <MeleeHitChance>2</MeleeHitChance>
+	</statOffset>
+    <displayPriority>5500</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Corpulence</defName>
+    <label>corpulence</label>
+    <description>The deviation of this creature's corpulence from the average of its congeners.</description>
+    <statFactorExp>
+	  <BodySizeOffset>0.12</BodySizeOffset>
+	  <Mass>0.16</Mass>
+	  <HealthScaleOffset>0.1</HealthScaleOffset>
+	  <LifeExpectancyOffset>-0.11</LifeExpectancyOffset>
+	  <HungerRateMultiplier>0.15</HungerRateMultiplier>
+	  <ImmunityGainSpeed>-0.04</ImmunityGainSpeed>
+	  <MeleeDamageFactor>0.1</MeleeDamageFactor>
+	  <ManipulationFactor>-0.01</ManipulationFactor>
+	  <MovingFactor>-0.1</MovingFactor>
+	  <HuntingStealth>-0.12</HuntingStealth>
+	</statFactorExp>
+    <statOffset>
+	  <ComfyTemperatureMin>5</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>-5</ComfyTemperatureMax>
+	  <MeleeDodgeChance>-7</MeleeDodgeChance>
+	</statOffset>
+    <displayPriority>5490</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Strength</defName>
+    <label>strength</label>
+    <description>The deviation of this creature's strength from the average of its congeners.</description>
+    <statFactorExp>
+	  <LifeExpectancyOffset>-0.05</LifeExpectancyOffset>
+	  <ManipulationFactor>0.015</ManipulationFactor>
+	  <MovingFactor>0.02</MovingFactor>
+	  <HungerRateMultiplier>0.10</HungerRateMultiplier>
+	  <MeleeDamageFactor>0.3</MeleeDamageFactor>
+	  <CarryingCapacity>0.2</CarryingCapacity>
+	  <ConstructionSpeed>0.12</ConstructionSpeed>
+	  <PlantWorkSpeed>0.05</PlantWorkSpeed>
+	  <AnimalGatherSpeed>0.03</AnimalGatherSpeed>
+	  <SmoothingSpeed>0.03</SmoothingSpeed>
+	  <DeepDrillingSpeed>0.05</DeepDrillingSpeed>
+	  <MiningSpeed>0.2</MiningSpeed>
+	</statFactorExp>
+    <displayPriority>5480</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Robustness</defName>
+    <label>robustness</label>
+    <description>The deviation of this creature's robustness from the average of its congeners.</description>
+    <statFactorExp>
+	  <MovingFactor>-0.02</MovingFactor>
+	  <IncomingDamageFactor>-0.3</IncomingDamageFactor>
+	</statFactorExp>
+    <displayPriority>5470</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Stamina</defName>
+    <label>stamina</label>
+    <description>The deviation of this creature's stamina from the average of its congeners.</description>
+    <statFactorExp>
+	  <BloodPumpingFactor>0.04</BloodPumpingFactor>
+	  <BreathingFactor>0.04</BreathingFactor>
+	  <MovingFactor>0.2</MovingFactor>
+	  <WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+	</statFactorExp>
+    <displayPriority>5460</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Agility</defName>
+    <label>agility</label>
+    <description>The deviation of this creature's agility from the average of its congeners.</description>
+    <statFactorExp>
+	  <ManipulationFactor>0.03</ManipulationFactor>
+	  <MovingFactor>0.05</MovingFactor>
+	  <PawnTrapSpringChance>-0.2</PawnTrapSpringChance>
+	</statFactorExp>
+    <statOffset>
+	  <PawnTrapSpringChance>-0.05</PawnTrapSpringChance>
+	  <MeleeHitChance>5</MeleeHitChance>
+	  <MeleeDodgeChance>7</MeleeDodgeChance>
+	</statOffset>
+    <displayPriority>5450</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Dexterity</defName>
+    <label>dexterity</label>
+    <description>The deviation of this creature's dexterity from the average of its congeners.</description>
+    <statFactorExp>
+	  <ManipulationFactor>0.075</ManipulationFactor>
+	</statFactorExp>
+    <displayPriority>5440</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Perceptive</defName>
+    <label>perceptive</label>
+    <description>The deviation of this creature's perception of its environment from the average of its congeners.</description>
+    <statFactorExp>
+	  <PawnTrapSpringChance>-0.7</PawnTrapSpringChance>
+	  <HuntingStealth>0.25</HuntingStealth>
+	</statFactorExp>
+    <statOffset>
+	  <PawnTrapSpringChance>-0.2</PawnTrapSpringChance>
+	  <MeleeHitChance>2</MeleeHitChance>
+	  <MeleeDodgeChance>5</MeleeDodgeChance>
+	  <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+	</statOffset>
+    <displayPriority>5430</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Tranquillity</defName>
+    <label>tranquillity</label>
+    <description>The deviation of this creature's tranquillity from the average of its congeners.</description>
+    <statFactorExp>
+	  <ManhunterOnDamageOffset>-0.3</ManhunterOnDamageOffset>
+	  <ManhunterOnTameFailOffset>-0.3</ManhunterOnTameFailOffset>
+	  <AimingDelayFactor>0.5</AimingDelayFactor>
+	  <PawnTrapSpringChance>-0.2</PawnTrapSpringChance>
+	  <SocialFightFactor>-0.35</SocialFightFactor>
+	</statFactorExp>
+    <statOffset>
+	  <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+	</statOffset>
+    <displayPriority>5420</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Bravery</defName>
+    <label>bravery</label>
+    <description>The deviation of this creature's bravery from the average of its congeners.</description>
+    <statFactorExp>
+	  <ManhunterOnDamageOffset>0.3</ManhunterOnDamageOffset>
+	  <ManhunterOnTameFailOffset>0.3</ManhunterOnTameFailOffset>
+	  <PainShockThreshold>-0.6</PainShockThreshold>
+	  <SocialFightFactor>0.18</SocialFightFactor>
+	  <SocialImpact>0.07</SocialImpact>
+	</statFactorExp>
+    <displayPriority>5410</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Affection</defName>
+    <label>affection</label>
+    <description>The deviation of this creature's affection from the average of its congeners.</description>
+    <statFactorExp>
+	  <SocialFightFactor>-0.18</SocialFightFactor>
+	  <NuzzleMtbHoursOffset>-1</NuzzleMtbHoursOffset>
+	</statFactorExp>
+    <statFactor>
+	  <NegativeInteractionFactor>-0.8</NegativeInteractionFactor>
+	</statFactor>
+    <statOffset>
+	  <KindWordChance>0.08</KindWordChance>
+	</statOffset>
+    <displayPriority>5400</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Empathy</defName>
+    <label>empathy</label>
+    <description>The deviation of this creature's empathy from the average of its congeners.</description>
+    <statFactor>
+	  <NegativeInteractionFactor>-0.5</NegativeInteractionFactor>
+	  <SocialFightFactor>-0.1</SocialFightFactor>
+	</statFactor>
+    <statOffset>
+	  <KindWordChance>0.03</KindWordChance>
+	</statOffset>
+    <displayPriority>5390</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Honesty</defName>
+    <label>honesty</label>
+    <description>The deviation of this creature's honesty from the average of its congeners.</description>
+    <statFactorExp>
+	  <TradePriceImprovement>-0.06</TradePriceImprovement>
+	  <NegotiationAbility>-0.11</NegotiationAbility>
+	</statFactorExp>
+    <statFactor>
+	  <NegativeInteractionFactor>0.5</NegativeInteractionFactor>
+	</statFactor>
+    <statOffset>
+	  <KindWordChance>0.04</KindWordChance>
+	</statOffset>
+    <displayPriority>5380</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Comprehension</defName>
+    <label>comprehension</label>
+    <description>The deviation of this creature's comprehension from the average of its congeners.</description>
+    <statFactorExp>
+	  <GlobalLearningFactor>0.7</GlobalLearningFactor>
+	  <ResearchSpeed>0.12</ResearchSpeed>
+	  <ConstructSuccessChance>0.05</ConstructSuccessChance>
+	  <FixBrokenDownBuildingSuccessChance>0.05</FixBrokenDownBuildingSuccessChance>
+	</statFactorExp>
+    <displayPriority>5370</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Astuteness</defName>
+    <label>astuteness</label>
+    <description>The deviation of this creature's astuteness from the average of its congeners.</description>
+    <statFactorExp>
+	  <GlobalLearningFactor>0.15</GlobalLearningFactor>
+	  <TradePriceImprovement>0.07</TradePriceImprovement>
+	  <NegotiationAbility>0.12</NegotiationAbility>
+	  <ArrestSuccessChance>0.08</ArrestSuccessChance>
+	</statFactorExp>
+    <displayPriority>5360</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Charisma</defName>
+    <label>charisma</label>
+    <description>The deviation of this creature's charisma from the average of its congeners.</description>
+    <statFactorExp>
+	  <SocialImpact>0.15</SocialImpact>
+	  <TradePriceImprovement>0.07</TradePriceImprovement>
+	  <NegotiationAbility>0.12</NegotiationAbility>
+	  <ArrestSuccessChance>0.1</ArrestSuccessChance>
+	</statFactorExp>
+    <statOffset>
+	  <PawnBeauty>0.3</PawnBeauty>
+	</statOffset>
+    <displayPriority>5350</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Beauty</defName>
+    <label>beauty</label>
+    <description>The deviation of this creature's beauty from the average of its congeners.</description>
+    <statOffset>
+	  <PawnBeauty>1.5</PawnBeauty>
+	</statOffset>
+    <displayPriority>5340</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Diligence</defName>
+    <label>diligence</label>
+    <description>The deviation of this creature's diligence from the average of its congeners.</description>
+    <statFactorExp>
+	  <LifeExpectancyOffset>-0.09</LifeExpectancyOffset>
+	  <MoveSpeed>0.08</MoveSpeed>
+	  <WorkSpeedGlobal>0.21</WorkSpeedGlobal>
+	</statFactorExp>
+    <displayPriority>5330</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Meticulousness</defName>
+    <label>meticulousness</label>
+    <description>The deviation of this creature's meticulousness from the average of its congeners.</description>
+    <statFactorExp>
+	  <EatingSpeed>-0.15</EatingSpeed>
+	  <AimingDelayFactor>0.2</AimingDelayFactor>
+	  <WorkSpeedGlobal>-0.14</WorkSpeedGlobal>
+	  <MiningYield>0.14</MiningYield>
+	  <AnimalGatherYield>0.14</AnimalGatherYield>
+	  <PlantHarvestYield>0.14</PlantHarvestYield>
+	  <ConstructSuccessChance>0.05</ConstructSuccessChance>
+	  <FixBrokenDownBuildingSuccessChance>0.05</FixBrokenDownBuildingSuccessChance>
+	</statFactorExp>
+    <statOffset>
+	  <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+	</statOffset>
+    <displayPriority>5320</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Tidiness</defName>
+    <label>tidiness</label>
+    <description>The deviation of this creature's tidiness from the average of its congeners.</description>
+    <statFactorExp>
+	  <MentalBreakThreshold>0.05</MentalBreakThreshold>
+	  <WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+	</statFactorExp>
+    <displayPriority>5310</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <!-- <BellCurve.CharacteristicDef ParentName="BaseCharac"> -->
+    <!-- <defName>Optimism</defName> -->
+    <!-- <label>optimism</label> -->
+    <!-- <displayPriority>310</displayPriority> -->
+  <!-- </BellCurve.CharacteristicDef> -->
+  
+  <BellCurve.CharacteristicDef ParentName="BaseCharac">
+    <defName>Toughness</defName>
+    <label>mental toughness</label>
+    <description>The deviation of this creature's mental toughness from the average of its congeners.</description>
+    <statFactorExp>
+	  <MentalBreakThreshold>-0.16</MentalBreakThreshold>
+	</statFactorExp>
+    <displayPriority>5300</displayPriority>
+  </BellCurve.CharacteristicDef>
+  
+  <!-- <BellCurve.CharacteristicDef ParentName="BaseCharac"> -->
+    <!-- <defName>Greed</defName> -->
+    <!-- <label>greed</label> -->
+    <!-- <displayPriority>320</displayPriority> -->
+  <!-- </BellCurve.CharacteristicDef> -->
+  
+  <!-- <BellCurve.CharacteristicDef ParentName="BaseCharac"> -->
+    <!-- <defName>BodyPurist</defName> -->
+    <!-- <label>body purist</label> -->
+    <!-- <displayPriority>330</displayPriority> -->
+  <!-- </BellCurve.CharacteristicDef> -->
+  
+</Defs>

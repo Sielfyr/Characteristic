@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatCategoryDef>
+    <defName>PawnCharacteristic</defName>
+    <label>Characteristic</label>
+    <displayOrder>300</displayOrder>
+  </StatCategoryDef>
+  
+  
+  <BellCurve.SpecialGenerationCharacDef>
+    <defName>SpecialGenerationCharac</defName>
+    <number>5</number>
+    <rolls>2</rolls>
+    <deviation>1.4</deviation>
+  </BellCurve.SpecialGenerationCharacDef>
+
+</Defs>
